@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Weather App Project JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="style4.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+:root {
+    --primary-color: #8490ff;
+    --secondary-color: #212121;
+    --bg: #fff;
+    --text-color: #333;
+    --bg-gray: #f2f2f2;
+    --header-green-color: #36ed22;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.brand-logo-name {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.75rem;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #8490ff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #212121;
+}
+
+.header {
+    padding: 1.6rem 4.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #36ed22;
+    box-shadow: 0px 0px 20px 0px rgba(132, 144, 255, 0.2);
+    width: 100%;
+    height: 10vh;
+}
+
+.header img {
+    height: 30px;
+    padding-top: 8px;
+}
+
+.navbar-lists {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-lists li {
+    margin-right: 20px;
+}
+
+.navbar-lists li:last-child {
+    margin-right: 0;
+}
+
+.navbar-link {
+    color: #fff;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.icon {
+    display: none;
+}
+
+.navbar-lists li:nth-child(1) i {
+    color: rgb(221, 228, 215);
+}
+
+.navbar-lists li:nth-child(2) i {
+    color: rgb(240, 237, 64);
+}
+
+.navbar-lists li:nth-child(3) i {
+    color: rgb(11, 12, 11);
+}
+
+.navbar-lists li:nth-child(4) i {
+    color: orange;
+}
+
+.navbar-lists li:nth-child(5) i {
+    color: rgb(33, 105, 239);
+}
+
+@media screen and (max-width: 768px) {
+    .icon {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 999;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+        flex-direction: row-reverse;
+    }
+
+    .navbar-lists {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #3beb2b;
+        width: 100%;
+        padding-top: 10px;
+        z-index: 998;
+    }
+
+    .navbar-lists.responsive {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-lists.responsive li {
+        margin: 10px 0;
+    }
+
+    .navbar-link {
+        padding: 10px 20px;
+    }
+
+    .navbar-link i {
+        display: none;
+    }
+}
+
+.school-img {
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    color: #1bf346;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    animation: img-blink 2s infinite alternate;
+}
+
+@keyframes img-blink {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.5;
+    }
+}
+
+#vision {
+    padding: 4rem 0;
+    background-color: rgb(28, 225, 97);
+}
+
+#vision h2 {
+    text-align: center;
+    color: var(--bg);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#vision p {
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 1.125rem;
+}
+
+.main-notice-section {
+    background-color: var(--bg);
+    padding: 4rem 0;
+    margin-left: 3rem;
+    overflow: auto;
+}
+
+.notice-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.notice-bord,
+.event-card {
+    width: 50%;
+    margin-bottom: 2rem;
+}
+
+.notice-bord {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notice-bord h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    margin-left: 5rem;
+}
+
+.notice-bord li {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    list-style: none;
+    cursor: pointer;
+}
+
+.notice-bord li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.notice-bord li p {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.event-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-card .event-heading {
+    color: var(--header-green-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event {
+    width: 50%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease forwards;
+    transition: transform 0.3s ease, 
+                  box-shadow 0.3s ease, 
+                  background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.event:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #085718;
+    color: #fff;
+}
+
+.event h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.event p {
+    margin-bottom: 0.5rem;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .notice-container {
+        flex-direction: column;
+    }
+
+    .notice-bord,
+    .event-card {
+        width: calc(100% - 20px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .event-card {
+        margin-top: 2rem;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--secondary-color);
+    color: #fff;
+    height: 10vh;
+}
+
+.contact-form-heading {
+    color: #007bff;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #32d423;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #187de8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.aboutus-heading {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.subheading {
+    color: #000;
+}
+
+
+#about-us-section {
+    background: rgb(28, 225, 97);
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    padding-bottom: 20px;
+    border: 3px solid rgb(28, 225, 97);
+    border-radius: 5px;
+}
+
+.about-us-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.subheading {
+    color: #000;
+}
+
+.about-us-container p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: black;
+    text-align: left;
+}
+
+.about-us-container p:first-of-type {
+    margin-top: 0;
+}
+
+.about-us-container p:last-of-type {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .aboutus-heading {
+        font-size: 2rem;
+    }
+
+    .about-us-container p {
+        font-size: 1rem;
+    }
+}
+
+.our-school-map {
+    text-align: center;
+}
+
+
+.location-heading {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .location-heading {
+        font-size: 2rem;
+    }
+
+    .our-school-map iframe {
+        width: 90%;
+        max-width: 100%;
+        height: 300px;
+        margin: 0 auto;
+    }
+}
+
+.new-text {
+    color: red;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity:0.5;
+}
+}
+h1{
+  background-color: #012041;
+}P{
+  color: #187de8;
+}
+    </style>
+  </head>
+  <body> <h1>Weather Dashboard
+    <Marquee>
+     WELCOME TO WEATHER REPORT
+    </Marquee>
+   </h1>
+    <div class="container">
+      <div class="weather-input">
+        <h3>Enter a City Name</h3>
+        <input class="city-input" type="text" placeholder="E.g.,lucknow ,kanpur ,sitapur" style="background-color: #dfcccc;">
+        <button class="search-btn" style="background-color: #0056b3;">Search</button>
+        <div class="separator"></div>
+        <button class="location-btn" style="background-color: #187de8;">Use Current Location</button>
+      </div>
+      <H1 style="background-color: #a7e696;">
+        <Marquee style="background-color: #be0b77; color: #0056b3;">
+          DATA-ANALYSIS OF WEATHER REPORT OF UTTAR PRADESH
+        </Marquee>
+        <P>LUCKNOW</P>
+        <P>
+          BARABANKI
+        </P>
+        <P>GOMTI NAGAR</P>
+        <P>KANPUR DEHAT</P>
+        <P>
+          KANPUR
+        </P>
+        <P>DEORIA</P>
+        <P>KHUSHI-NAGAR</P>
+        <P>UNAO</P>
+        <P>SITAPUR</P>
+        <P>BISWA</P>
+        <p>NOIDA</p>
+        <P>LAKHIMPUR</P>
+        <P>GORAKPUR</P>
+        <P>GAZIPUR</P>
+        <P>
+          BAKSHI KA TALAB
+        </P>
+<P>FAIZABAD</P>
+      </H1>
+      <div class="weather-data">
+        <div class="current-weather">
+          <div class="details">
+            <img src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-08-07 at 15.01.19_eb683def.jpg" width="200px" height="200px">
+            <h2 style=" margin-top: 10PX;">Uttar pradesh ( Lucknow )</h2>
+            <h6>Temperature: 20°C</h6>
+            <h6>Wind:40 M/S</h6>
+            <h6>Humidity: 30%</h6>
+          </div>      </div>
+        <div class="days-forecast">
+          <h2>5-Day Forecast</h2>
+          <ul class="weather-cards">
+            <li class="card">
+                <img src="C:\Users\adity\OneDrive\Documents\Pictures\Screenshots\Screenshot 2024-08-10 112607.png"  style="margin-left: 30PX; width:200PX; height: 100PX;">
+              <h3 style=" margin-top: 20PX;">( BAKSHI KA TALAB )</h3>
+              <h6>Temp: 22°C</h6>
+              <h6>Wind: 12 M/S</h6>
+              <h6>Humidity: 34%</h6>
+            </li>
+            <li class="card">
+                <img src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-08-07 at 15.01.17_999269cb.jpg" style="margin-left: 30PX; width:200PX; height: 100PX;">
+              <h3 style=" margin-top: 20PX;">(BARABANKI)</h3>
+              <h6>Temp: 23°C</h6>
+              <h6>Wind: 23 M/S</h6>
+              <h6>Humidity: 89%</h6>
+            </li>
+            <li class="card">
+                <img src="C:\Users\adity\OneDrive\Documents\Pictures\Screenshots\Screenshot 2024-08-10 114336.png" style="margin-left: 30PX; width:200PX; height: 100PX;">
+              <h3 style=" margin-top: 20PX;">(SITAPUR )</h3>
+              <h6>Temp: 29°C</h6>
+              <h6>Wind: 89 M/S</h6>
+              <h6>Humidity: 65%</h6>
+            </li>
+            <li class="card">
+                <img src="C:\Users\adity\OneDrive\Documents\Pictures\Screenshots\Screenshot 2024-08-10 114150.png" style="margin-left: 30PX; width:200PX; height: 100PX;">
+              <h3 style=" margin-top: 20PX;">(GAZIPUR )</h3>
+              <h6>Temp: 34%</h6>
+              <h6>Wind: 57 M/S</h6>
+              <h6>Humidity: 24_%</h6>
+            </li>
+            <li class="card">
+                <img src="C:\Users\adity\OneDrive\Documents\Pictures\Screenshots\Screenshot 2024-08-10 114543.png" style="margin-left: 30PX; width:200PX; height: 100PX;">
+              <h3  style=" margin-top: 20PX;">(KANPUR )</h3>
+              <h6>Temp: 46°C</h6>
+              <h6>Wind: 33M/S</h6>
+              <h6>Humidity:86%</h6>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <img src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-08-07 at 14.56.48_c26ca394.jpg" width="1500px" height="1000px">
+    <section class="our-school-map" id="campus-on-map">
+      <h2 class="location-heading" style="text-align: center; background-color: rgb(143, 75, 207); border-radius:14px ; padding:23px;">
+            Find Our Location On Map
+        </h2>
+      <iframe src=
+"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47169.795533326396!2d77.38522794611738!3d28.51217402233223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce626851f7009%3A0x621185133cfd1ad1!2sGeeksforGeeks%20%7C%20Coding%20Classes!5e0!3m2!1sen!2sin!4v1712429105950!5m2!1sen!2sin"
+              width="100%" height="450" 
+              style="border:0;"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+  </section>
+  <section id="contact-form" style="margin-top: 100PX;">
+    <h2 class="contact-form-heading">
+                      Contact Us Form
+      </h2>
+    <div class="container">
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="fullName">
+                  Full Name
+                  </label>
+                <input type="text" id="fullName" 
+                       name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email"
+                       name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" 
+                       name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" 
+                          required>
+                  </textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+<div class="media-domains" style="background-color: #1e1d1d; height: 500PX; margin-top: 100PX;" >
+  <li class="link_name"  style="background-color: #000; color: darkgray; text-align: center;padding: 34PX;">MEDIA-DOMAIN</li>
+    <img      style="width: 100px; height:100px ; margin-left:70PX ; margin-top: 150PX;"    src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-10 at 05.35.01_9f704b6e.jpg">
+    <a href="#"><i class="fab fa-facebook-f"></i>Facebook</a>
+    <img      style="width: 100px; height:100px ; margin-left: 70PX;"    src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-10 at 05.35.02_a0886cb1.jpg">
+    <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+    <img      style="width: 100px; height:100px ; margin-left: 70PX;"    src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-10 at 05.34.59_40a90f2e.jpg">
+    <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+    <img      style="width: 100px; height:100px ; margin-left: 70PX;"    src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-10 at 05.34.57_5108b259.jpg">
+    <a href="#"><i class="fab fa-linkedin-in"></i> linkedin</a>
+    <img      style="width: 100px; height:100px ; margin-left:70PX ;"    src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-10 at 05.34.58_e20ede7e.jpg">
+    <a href="#"><i class="fab fa-youtube"></i>youtube</a> 
+    <img      style="width: 100px; height:100px ; margin-left: 70PX;"    src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-10 at 05.34.58_0cb00b2f.jpg">
+    <a href="#"><i class="fab fa-github"></i>github</a>
+  </div>
+</UL>
+
+</footer>
+</fieldset>
+<div class="demo12" style="text-align: center; background-color: #085718; padding: 23PX; font-family: 'Times New Roman', Times, serif; font-weight: bolder;">
+Copyright@visheshk.p 
+</div>
+</body>
+</html>
