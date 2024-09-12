@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Bootstrap Theme The Band</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+  
+  
+  body{
+    background-color: #d5d5d5;
+  }
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;      
+      font-size: 20px;
+      color: #111;
+  }
+  .container1 {
+   margin-left:0px;
+    width: 1500px;
+    height: 1500px;
+}
+  .container1 {
+     margin-left:0px;
+      width: 1500px;
+      height: 1500px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color:black;}
+  
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none;
+    }
+  }
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  #googleMap {
+      width: 100%;
+      height: 400px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+  }  
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+  footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }  
+  .form-control {
+      border-radius: 0;
+  }
+  textarea {
+      resize: none;
+  }
+  .servicesText.card {
+    height: 280px;
+    cursor: pointer;
+  }
+  .card servicesText{ background-color: #333;
+    color: #d5d5d5;
+ text-align: center;
+ width: 500px;
+ height: 500px;
+ font-family: 'Times New Roman', Times, serif;
+ font-weight: bolder;
+  }
+  .card-body{ background-color: #333;
+    color: #d5d5d5;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+  }
+.servicesIcon {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+}
+.card-title {
+    text-align: center;
+}
+.card:hover .servicesIcon {
+    color: #008000;
+}
+.servicesText:hover {
+    border: 1px solid #008000;
+}
+
+.social-icons {
+    font-size: 36px;
+    cursor: pointer;
+}
+.fab {
+    color: #000000;
+}
+
+#footer {
+    background-color: #369400;
+    text-align: center;
+}
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#band">GALLERY</a></li>
+        <li><a href="file:///C:/Users/adity/OneDrive/Documents/Desktop/codsoft%20internship/level1task1.html">CERTIFICATES</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#ABOUT US">ABOUT-US</a></li>
+        <li><a href="#QUERY">COMPLAIN/ QUERY</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#"> library</a></li>
+            <li><a href="#">Extras</a></li>
+            <li><a href="#">Media</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header>
+  <section id="about">
+    <div class="container mt-4 pt-4">
+        <h1 class="text-center">ABOUT-ME</h1>
+        <img src="C:\Users\adity\OneDrive\Documents\Pictures\Documents - Copy\1685670270272.jpg" class= "imageAboutPage" alt="HAR HAR MAHADEV" width="450px" height="450px" style="margin-top:10PX; border-radius:50% ; margin-left:320px;">
+        <h3 class="text-center"> VISHESH KUMAR PRAJAPATI</h3>
+        <div class="row mt-4">
+            
+       
+       
+
+            <div class="col-lg-8">
+                <p> 
+
+<p style="font-family: 'Times New Roman', Times, serif;   font-weight: bolder; font-size: x-large;">I am currently studying Computer science engineering at Lucknow.</p>
+<p style="font-family: 'Times New Roman', Times, serif;   font-weight: bolder; font-size: x-large;">Throughout my academic journey, I have developed a solid foundation in various aspects of computer science and engineering and have gained practical experience through my projects and internship.</p>
+ <p style="font-family: 'Times New Roman', Times, serif ; font-weight: bolder; font-size: x-large;;">During my studies, I completed an internship where I focused on Java Spring Boot and performed tasks such as:</p>
+<ul style="font-family: 'Times New Roman', Times, serif ; font-weight: bolder; font-size: x-large;;">
+<li style="font-family: 'Times New Roman', Times, serif ; font-weight: bolder; font-size: x-large;;">* CRUD Operations: Implementing create, read, update, and delete functionalities.</li>
+<li style="font-family: 'Times New Roman', Times, serif ; font-weight: bolder; font-size: x-large;;">* Collections Framework: Utilizing Java’s collections framework to manage data efficiently.</li>
+<li style="font-family: 'Times New Roman', Times, serif ; font-weight: bolder; font-size: x-large;;">* JDBC Operations: Integrating Java applications with databases using JDBC.</li>
+<li style="font-family: 'Times New Roman', Times, serif ; font-weight: bolder; font-size: x-large;;">* Database Management: Handling data manipulation and retrieval tasks.</li>
+<li style="font-family: 'Times New Roman', Times, serif ; font-weight: bolder; font-size: x-large;;">* JavaScript Form Management: Managing web forms with JavaScript for interactive web applications.</li>
+<li style="font-family: 'Times New Roman', Times, serif ; font-weight: bolder; font-size: x-large;;">* Managing Product Master: Working on creating, updating, and deleting product entities.</li>
+</ul>
+<p style="font-family: 'Times New Roman', Times, serif;   font-weight: bolder; font-size: x-large;">In addition to these experiences, I have a strong foundation in various programming languages, including Java, c, python, JavaScript, Python, SQL, etc.</p>
+<p style="font-family: 'Times New Roman', Times, serif;   font-weight: bolder; font-size: x-large;">One of my key strengths is my ability to learn quickly and adapt to new technologies. I am passionate about software development and enjoy solving complex problems.</p>
+<p style="font-family: 'Times New Roman', Times, serif; font-weight: bolder; font-size: x-large;">My long-term goal is to achieve a higher position in my career, and my short-term goal is to gain practical experience, which will help me achieve my long-term goal.</p>
+<p style="font-family: 'Times New Roman', Times, serif; font-weight: bolder; font-size: x-large;">That's all about me.</p>
+<p style="font-family: 'Times New Roman', Times, serif; font-weight: bolder; font-size: x-large;">Thank You!</p>
+  
+                </p>
+                <div class="row mt-3">
+                  <div class="col-md-6">
+                  <p>----------------------------------------------------</p>
+                </div>
+                    <div class="col-md-6">
+                        <ul>
+                            <li>Name:vishesh kumar prajapati</li>
+                            <li>Age: 18</li>
+                            <li>Occupation: learning Web Developing</li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <p> 
+                  
+                      <button><a    style="color: blue; font-size: xx-large;text-decoration: none;background-color: #008000;    "href="https://www.linkedin.com/in/vishesh-kumar-prajapati-45111829a " > LINKEDIN</a></button>
+                      <button><a  style="color: blue; font-size: xx-large;  text-decoration: none;background-color: #008000; "                 href="visheshprajapati7920@gmail.com" >EMAIL-ID</a></button>
+                      <button><a  style="color: blue; font-size: xx-large;  text-decoration: none;background-color: #008000; "   href="https://github.com/vishes-i/-VISHESHCODSOFT"> GITHUB</a></button> 
+                      <button style="background-color: black;  border: SOLID darkblue;  margin-left:500px ; margin-top: 100px; border-radius:20% ; width:100px ; height: 100px;">
+                        <a  style="color: blueviolet;"    href="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-08-11 at 09.51.52_b5b47ea6.jpg">RESUME</a>
+                       </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+</section>
+
+<section id="services">
+  <div class="container1">
+      <h1 class="text-center">Services</h1>
+      <div class="row">
+          <div class="col-lg-4 mt-4">
+              <div class="card servicesText">
+                  <div class="card-body">
+                      <i class="fas servicesIcon fa-clock"></i>
+                      <h4 class="card-title mt-3" style="background-color: #29292c; text-align: center;font: 1em sans-serif;">Website Development</h4>
+                      <p class="card-text mt-3" style="width: 450px; height: 500px;">
+                        Web development is the building and maintenance of websites; it's the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Web developers, or 'devs', do this by using a variety of coding languages.
+                      </p>
+                  </div>
+              </div>  
+          </div>
+          <div class="col-lg-4 mt-4">
+              <div class="card servicesText">
+                  <div class="card-body">
+                      <i class='fas servicesIcon fa-layer-group'></i>
+                      <h4 class="card-title mt-3" style="background-color: #29292c; text-align: center;font: 1em sans-serif;">Website Design</h4>
+                      <p class="card-text mt-3" style="width: 450px; height: 500px;">
+                        Web design involves creating the visual layout and aesthetics of a website, focusing on user experience, graphics, and overall look. Front-end development, on the other hand, involves implementing the design into a functional website using coding languages like HTML, CSS, and JavaScript. 
+                      </p>
+                  </div>
+              </div>  
+          </div>
+
+          <div class="col-lg-4 mt-4">
+              <div class="card servicesText">
+                  <div class="card-body">
+                      <i class='far servicesIcon fa-check-circle'></i>
+                      <h4 class="card-title mt-3" style="background-color: #29292c; text-align: center;font: 1em sans-serif;">Website Deployment</h4>
+                      <p class="card-text mt-3" style="width: 450px; height: 500px;">
+                        Deploying a website means that you are deploying changes you have made to your website, typically code, from source control to an environment (typically development, staging, or live). These changes can be of any size, ranging from making small bug fixes and adding new features to deploying an entirely new website to a live environment.
+
+
+                      </p>
+                  </div>
+              </div>  
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-lg-4 mt-4">
+              <div class="card servicesText">
+                  <div class="card-body">
+                      <i class='fas servicesIcon fa-search'></i>
+                      <h4 class="card-title mt-3" style="background-color: #29292c; text-align: center;font: 1em sans-serif;">SEO</h4>
+                      <p class="card-text mt-3" style="width: 450px; height: 500px;">
+                        SEO means Search Engine Optimization and is the process used to optimize a website's technical configuration, content relevance and link popularity so its pages can become easily findable, more relevant and popular towards user search queries, and as a consequence, search engines rank them better.
+                      </p>
+                  </div>
+              </div>  
+          </div>
+
+          <div class="col-lg-4 mt-4">
+              <div class="card servicesText">
+                  <div class="card-body">
+                      <i class='fas servicesIcon fa-shield-alt'></i>
+                      <h4 class="card-title mt-3" style="background-color: #29292c; text-align: center;font: 1em sans-serif;">DevOps</h4>
+                      <p class="card-text mt-3" style="width: 450px; height: 500px;">
+                        DevOps is the combination of cultural philosophies, practices, and tools that increases an organization's ability to deliver applications and services at high velocity: evolving and improving products at a faster pace than organizations using traditional software development and infrastructure management processes.
+                      </p>
+                  </div>
+              </div>  
+          </div>
+
+          <div class="col-lg-4 mt-4" >
+              <div class="card servicesText" >
+                  <div class="card-body" >
+                      <i class='fas servicesIcon fa-wrench'></i>
+                      <h4 class="card-title mt-3" style="background-color: #29292c; text-align: center;font: 1em sans-serif;">QA</h4>
+                      <p class="card-text mt-3" style="width: 450px; height: 500px;">
+                        DevOps QA testing plays a pivotal role by seamlessly integrating quality assurance practices throughout the development lifecycle. QA testers in DevOps collaborate closely with developers, automate tests, and continuously monitor application quality to ensure rapid and reliable software delivery
+                      </p>
+                  </div>
+              </div>  
+
+          </div>
+          <img src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-23 at 11.11.08_206dc7ea.jpg" width="765px" height="550px">
+          <img src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-08-05 at 18.20.38_94f45c3d.jpg" width="765px" height="550px">
+          <img src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-08-03 at 22.41.27_1617f2c3.jpg" width="765px" height="550px">
+          <img src="C:\Users\adity\OneDrive\Documents\Pictures\Screenshots\Screenshot 2024-08-11 090652.png" width="765" height="550px">
+
+      </div>
+  </div>
+</section>
+<h1 style="text-decoration: solid; text-align: center ; color: #000; margin-top: 300PX; background-color: blue;">CERTITFICATION COURSES</h1>
+<section  style="border: 12px  color(srgb-linear red green blue); background-color: slategrey; margin-top: 100px;">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;  margin-left :50px;  "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-16 at 08.31.54_0780dd81.jpg" alt=" my certificate">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;  "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.33.23_c177f940.jpg "alt=" my certificates">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;   margin-left:50px; "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-08-11 at 09.14.54_036c92f9.jpg" alt= "my certificates">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;  "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.28_35bc522f.jpg" alt= "my certificates">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;  margin-left:50px;  "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.29_7b62785a.jpg" alt=" my certificate ">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;  "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.29_7b62785a.jpg" alt=" my certificate ">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;  margin-left:50px;  "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.30_fabd1fc0.jpg" alt=" my certificate ">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;  "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.32_e19ce374.jpg" alt=" my certificate ">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;  margin-left:50px;   "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.33_7e0e494a.jpg" alt=" my certificate ">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;  "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.34_4130d7f9.jpg" alt=" my certificate "> 
+<img  style="height: 700px;  width: 700px; border-radius: 20%; margin-left:50px;  "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.35_78154284.jpg" alt=" my certificate ">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;  "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.36_5a6b873d.jpg" alt=" my certificate ">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;   margin-left:50px;  "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-08-11 at 09.24.10_a863e845.jpg" alt=" my certificate ">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;  "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.37_82510926.jpg" alt=" my certificate ">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;   margin-left:50px;  "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.38_890f46dd.jpg" alt=" my certificate ">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;  "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.39_901ed00e.jpg" alt=" my certificate ">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;    margin-left:50px; "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.40_948e2098.jpg" alt=" my certificate ">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;  "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.41_e6317648.jpg" alt=" my certificate ">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;  margin-left:50px;   "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.41_a0b4952c.jpg" alt=" my certificate ">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;  "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.41_b8633cf6.jpg" alt=" my certificate ">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;   margin-left:50px;  "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.42_32ba23df.jpg" alt=" my certificate ">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;  "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.43_ec25b278.jpg" alt=" my certificate ">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;   margin-left:50px;  "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.43_f18e975c.jpg" alt=" my certificate ">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;  "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.44_e5cdfd6c.jpg" alt=" my certificate ">
+<img  style="height: 700px;  width: 700px; border-radius: 20%;  margin-left:50px;   "         src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.44_ed0eb561.jpg" alt=" my certificate ">
+<img    style="height: 700px;  width: 700px; border-radius: 20%;" src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-03 at 17.22.30_97e79576.jpg" alt=" my certificate ">
+<img    style="height: 700px;  width: 700px; border-radius: 20%;  margin-left:50px; " src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-03 at 17.22.43_36fadd24.jpg" alt=" my certificate ">
+<img    style="height: 700px;  width: 700px; border-radius: 20%;" src=" C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-03 at 17.22.51_dfd1ebfa.jpg" alt=" my certificate ">
+<img    style="height: 700px;  width: 700px; border-radius: 20%;  margin-left:50px; " src=" C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-03 at 17.22.54_ebae9bac.jpg" alt=" my certificate ">
+<img    style="height: 700px;  width: 700px; border-radius: 20%;" src="  C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-03 at 17.22.58_c0649538.jpg" alt=" my certificate ">
+<img    style="height: 700px;  width: 700px; border-radius: 20%;  margin-left:50px; " src="  C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-03 at 17.23.05_9c26dbb1.jpg" alt=" my certificate ">
+<img    style="height: 700px;  width: 700px; border-radius: 20%; " src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-02 at 18.35.32_2d8a69ab.jpg" alt=" my certificate ">
+<img    style="height: 700px;  width: 700px; border-radius: 10%;  margin-left:50px;  " src="C:\Users\adity\OneDrive\Documents\Pictures\Screenshots\Screenshot 2024-07-14 093029.png" alt=" my certificate ">
+<img    style="height: 700px;  width: 750px; border-radius: 10%; " src="C:\Users\adity\OneDrive\Documents\Pictures\Screenshots\Screenshot 2024-07-14 093244.png" alt=" my certificate ">
+</section>
+    <section id="portfolio" style="margin-top:10%;">
+        <div class="container2">
+            <h1 class="text-center">PORTFOLIO-CONTENT</h1>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <div class="card">
+                        <img class="card-img-top" src="C:\Users\adity\Downloads\imresizer-1703575575417.jpg" alt="Card image" style="width:500px;height: 240px;">
+                        <div class="card-body">
+                            <h4 class="card-title">YouTube Clone</h4>
+                            <p class="card-text">This project is a YouTube clone implemented using HTML, CSS, and JavaScript. The goal of this project is to recreate the basic functionality and design
+                            </p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="C:\Users\adity\Downloads\Create a Quiz App with Timer using HTML CSS & JavaScript.jpg" alt="Card image" style="width:500px;height: 240px;">
+                        <div class="card-body">
+                            <h4 class="card-title">Quiz App</h4>
+                            <p class="card-text">This is a completely free Mobile QuizUp App and can be shared with friends while connecting your Omninos Solution"s QuizUp Clone account to Facebook and  instagram.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="C:\Users\adity\Downloads\images (4).jpeg" alt="Card image" style="width:500px;height: 240px;">
+                        <div class="card-body">
+                            <h4 class="card-title">Product Landing Page</h4>
+                            <p class="card-text">Best clone landing page freelance services online. Outsource your clone landing page project and get it quickly done and delivered remotely online.
+                            </p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="C:\Users\adity\Downloads\original-03bc479d33ae038a81f99f7f4519dd35.png" alt="Card image" style="width:500px;height: 240px;">
+                        <div class="card-body">
+                            <h4 class="card-title">Messaging Service</h4>
+                            <p class="card-text">Express yourself with a custom message design created just for you by a professional designer. Need ideas? We’ve collected some amazing examples of message images from our global community of designers. Get inspired and start planning the perfect message design today.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="C:\Users\adity\Downloads\1_bwF0d7r2qs62xcgMCAUkWw.png" alt="Card image"style="width:500px;height: 240px;">
+                        <div class="card-body">
+                            <h4 class="card-title">Twitter Clone</h4>
+                            <p class="card-text">A Twitter clone is a simplified version of the popular social media platform, Twitter. The idea behind creating a Twitter clone is to understand the basic functionalities of a large-scale application and implement them using your coding knowledge.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="C:\Users\adity\Downloads\original-36380ec378789b96050e2b4d4db890a7.png" alt="Card image" style="width:500px;height: 240px;">
+                        <div class="card-body">
+                            <h4 class="card-title">Blog App</h4>
+                            <p class="card-text">WordPress is the best platform for bloggers who want to have complete control over their websites. It's an open source platform you can use to create a website or blog for free using WordPress.org, or you can pay for a hosted WordPress.com site.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+<section id="contact" style=" margin-top: 0%;">
+  <div class="container mt-3 contactContent">
+      <h1 class="text-center">Contact Me</h1>
+
+      <div class="row mt-4">
+          <div class="col-lg-6">
+             
+              <div style="max-width:100%;overflow:hidden;color:red;width:500px;height:500px;">
+                  <div id="embedmap-canvas" style="height:100%; width:100%;max-width:100%;">
+                      <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=new+york&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+                      </iframe>
+                  </div>
+                  <a class="googlemaps-html" href="https://www.embed-map.com" id="get-data-forembedmap">https://www.embed-map.com</a>
+                  <style>#embedmap-canvas img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}
+                  </style>
+              </div>
+          </div>
+
+          <div class="col-lg-6">
+            
+              <form>
+                  <input type="text" class="form-control form-control-lg" placeholder="Name">
+                  <input type="email" class="form-control mt-3" placeholder="Email">
+                  <input type="text" class="form-control mt-3" placeholder="Subject">
+                  <div class="mb-3 mt-3">
+                      <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Project Details"></textarea>
+                  </div>
+              </form>
+              <button type="button" class="btn btn-success mt-3">Contact Me</button>
+              
+          </div>
+
+      </div>
+  </div>
+</section>
+<div>
+</div>
+</header>
+<h4>
+  MY SCHOOL AND COLLEGE
+</h4>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img style="z-index:-1 ; position: absolute;"  src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-08-09 at 20.48.31_d54bcac7.jpg" alt="New York" width="1500" height="700">
+        <img  style="margin-top:600px; margin-left:px;"src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-08-09 at 20.48.31_7676788e.jpg" alt="Chicago" width="200" height="97">
+          <h3 style="color: hotpink;text-align: center; background-color: #29292c;">SARDAR PATEL GURUKUL ACADMEY</h3>
+          <p style="color: saddlebrown; text-align: center; background-color: #29292c;">SARDAR PATEL GURUKUL ACADMEY</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img  style="z-index:-1 ; position: absolute;"src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-08-09 at 20.28.07_b9aef274.jpg" alt="SR GLOBAL" width="1500" height="700">
+        <img  style="margin-top:600px; margin-left:px;"src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-08-09 at 20.28.07_b9aef274.jpg" alt="SR GLOBAL" width="200" height="100">
+        <h3 style="color: hotpink;text-align: center; background-color: #29292c;"> SR GLOBAL SCHOOL</h3>
+          <p style="color: saddlebrown; text-align: center; background-color: #29292c;">SR CLOBAL SCHOOL</p>
+            
+      </div>
+    
+      <div class="item">
+        <img style="z-index:-1 ; position: absolute;"src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-15 at 10.33.33_44f1f832.jpg" alt="Los Angeles" width="1500" height="700">
+        <img style="margin-top:600px; margin-left:px;" src="C:\Users\adity\OneDrive\Documents\WhatsApp Image 2024-07-15 at 10.33.33_44f1f832.jpg" alt="BBDU" width="200" height="100">
+          <h3 style="color:hotpink; text-align: center; background-color: #29292c;">BABU BANARASI DAS UNIVERSITY</h3>
+          <p style="color: saddlebrown; text-align: center; background-color: #29292c;">BABU BANARASI DAS UNIVERSITY</p>  
+      </div>
+    </div>
+
+
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div id="band" class="container text-center ">
+  <h3>THE BAND</h3>
+  <p><em>We love music!</em></p>
+  <p>How beautiful would it be if our schools and our education program showed how music is a combination of many different cultures, and cultures are an expression of many kinds of music? There’s a lot for our students, not only from a musical perspective, but also from a global perspective and in showing them how they fit in as part of a bigger world.</p>
+  <P> Dr. Miguel Cardona, U.S. Secretary of Education (Source: NAfME interview, July 2021)</P>
+
+  <P>The language of music is common to all generations and nations; it is understood by everybody, since it is understood with the heart. </P>
+  <P> Gioacchino Rossini (Source: Zanolini, Biografia di Gioacchino Rossini, 1875, A Dictionary of Musical Quotations. Ian Crofton, Donald Fraser, 1985)</P>
+  <P>
+  <P>Music deserves to be the mandatory second language of all schools in the world. </P>
+  <P> Paul Carvel, Belgian Author (Source: Music: Selected Quotes And Words of Wisdom)</P>
+  
+  <P>Music can change the world, because it can change people. </P>
+  <P> Bono (Source: Interview at the 1983 US Music Festival)</P>
+   
+    </p>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>A.R.Rahman</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="C:\Users\adity\Downloads\1704513856_a-r-rahman.jpg"     style="width: 200PX; height: 200PX;" class="img-circle person" alt="Random Name">
+      </a>
+      <div id="demo" >
+        <p>A. R. Rahman, a musical icon, doesn't require an introduction. Winning two Oscars only affirmed what we already knew – his music is cherished by Indians. A powerhouse of talent, Rahman has crafted countless iconic songs spanning various genres. His versatility and prolific contributions make him one of the most celebrated and famous musicians of the century.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Ustad Zakir Hussain</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="C:\Users\adity\Downloads\1704513874_ustad-zakir-hussain-1.jpg" class="img-circle person" alt="Random Name" style="width: 200PX; height: 200PX;">
+      </a>
+      <div id="demo2">
+        <p>Ustad Zakir Hussain, born on March 9, 1951, is an eminent figure among Indian classical musicians. A maestro in tabla, he's not just a percussionist but a versatile composer, film actor, and global music icon.Trained by his father, Ustad Allah Rakha, from an early age, Zakir embarked on his solo career by 11. </p>
+     
+     
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Ustad Qamruddin Bismillah Khan</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="C:\Users\adity\Downloads\1704513894_bismillah-khan.jpg" class="img-circle person" alt="Random Name" style="width: 200PX; height: 200PX;">
+      </a>
+      <div id="demo3">
+        <p>Ustad Qamruddin Bismillah Khan, born on March 21, 1916, was a legendary Indian musician credited for popularizing the Shehnai globally. Starting at the age of six, he learned from his maternal uncle Ali Bux Vilayatu Khan in Varanasi. By 14, he performed at the Allahabad Music Conference and composed music for films. </p>
+      
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="tour" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">TOUR DATES</h3>
+    <p class="text-center">HELLO GUYS :I hope all are doing well , we'll play you some music.keep enjoy your trip best of  luck for next journey thank you!<br> Remember to book your tickets!</p>
+    <ul class="list-group">
+      <li>September </li>
+      <li>October </li> 
+      <li>November </li>
+    </ul>
+    
+    <div  style="gap:100px;">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="C:\Users\adity\Downloads\images (3).jpeg" alt="Paris" width="400" height="300">
+          
+          <p><strong>Paris</strong></p>
+          <p>Friday 27 November 2024</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="C:\Users\adity\Downloads\download (2).jpeg" alt="New York" width="400" height="300">
+          <p><strong>New York</strong></p>
+          <p>Saturday 28 November 2024</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="C:\Users\adity\Downloads\download (4).jpeg" alt="San Francisco" width="400" height="300">
+          <p><strong>San Francisco</strong></p>
+          <p>Sunday 29 November 2024</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+ 
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">X</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
+              <input type="number" class="form-control" id="psw" placeholder="How many?">
+            </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+              <button type="submit" class="btn btn-block">Pay 
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="contact" class="container">
+  <h3 class="text-center">Contact</h3>
+  <p class="text-center"><em>We love our fans!</em></p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <p>Fan? Drop a note.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Lucknow, India</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@gmail.com</p>	   
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div>	
+    </div>
+  </div>
+  <br>
+  <h3 class="text-center">From The Blog</h3>  
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">:VISHESH</a></li>
+    <li><a data-toggle="tab" href="#menu1">KUMAR </a></li>
+    <li><a data-toggle="tab" href="#menu2">PRAJAPATI</a></li>
+    <li><a data-toggle="tab" href="#menu2">:Creator</a></li>
+    <li><a data-toggle="tab" href="#menu2">:Event Manager</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home">
+      <h2>Vishesh kumar prajapati, Manager</h2>
+      <p>Perseverance goes a long way. Success is not final; failure is not fatal: It is the courage to continue that counts.</p>
+    </div>
+    <div id="menu1">
+      <h2>AYUSHI GUPTA, Guitarist</h2>
+      <p>Always a pleasure people! Hope you enjoyed it as much as I did. Could I BE.. any more pleased?</p>
+    </div>
+    <div id="menu2" >
+      <h2>PARI PRAJAPATI, Bass player</h2>
+      <p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p>
+    </div>
+  </div>
+</div>
+
+<div id="googleMap"></div>
+
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+
+function initialize() {
+var mapProp = {
+center:myCenter,
+zoom:12,
+scrollwheel:false,
+draggable:false,
+mapTypeId:google.maps.MapTypeId.ROADMAP
+};
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+position:myCenter,
+});
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<div class="container">                 
+  <ul class="pager">
+    <li><a  style="color: red;"   href="file:///C:/Users/adity/OneDrive/Documents/c%20file/aditya%20kumar/task1bharatintern.html">Previous</a></li>
+    <li><a style="color:hotpink;"   href="file:///C:/Users/adity/OneDrive/Documents/c%20file/aditya%20kumar/task1bharatintern.html">Next</a></li>
+  </ul>
+</div>
+
+<footer class="text-center">
+  <p>Visheshprajapati7920@gmail.com</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+  
+    event.preventDefault();
+
+
+    var hash = this.hash;
+
+   
+   
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+   
+    
+      window.location.hash = hash;
+    });
+  });
+})
+</script>
+</body>
+</html>
